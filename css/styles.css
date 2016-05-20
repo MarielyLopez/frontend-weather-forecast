@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    /*background: url(http://www.photographyblogger.net/wp-content/uploads/2012/07/6.jpg)no-repeat fixed;*/
+    background: url("../img/font2.jpg")no-repeat center center fixed;/*  "../" es para regresar una carpeta,img es el nombre donde tengo mi imagen,luego el nombre de la imagen.*/
+    -webkit-background-size:cover; /*zafary and google chrome*/
+    -moz-background-size:cover;/*mozilla*/
+    -o-background-size:cover;/*opera(mobiles and desktop)*/
+    background-size:cover;/*explorer*/
+
+}
+
+header{
+    width: 100%;
+}
+
+.containWeather{
+    width: 60%;
+    max-width: 1000px;
+    height:100%;
+    margin: 20px auto;
+    background: #53c653;
+    border-radius: 20px;
+    padding: 10px 10px;
+    /*-webkit-animation-duration: 5s;  /* Chrome, Safari, Opera */
+    /*float: center;
+    /*
+    margin: auto;
+
+    height: 70%;
+    border-radius: 20px;
+    
+    
+    top:50%;*/
+}
+
+.containerDataWeather{
+    border-radius: 20px;
+    background: #53c653;
+}
+
+.country{
+    width: 60%;
+    max-width: 1000px;
+    height:100%;
+    margin: 20px auto;
+    background: #53c653;
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+
+.state{
+    width: 60%;
+    max-width: 1000px;
+    height:100%;
+    margin: 20px auto;
+    background: #53c653;
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+
+
+.containerDataTemperature{
+    width: 60%;
+    max-width: 1000px;
+    height:100%;
+    margin: 20px auto;
+    background: #53c653;
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+
+.sdkskds{
+    display: inline-block;
+}
+
+
+
+
+.change{
+    color: red;
+}
+
+
+@media (max-width: 700px) {
+  .change {
+    color: blue;
+  }
+
+}
