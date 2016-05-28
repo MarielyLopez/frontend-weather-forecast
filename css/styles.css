@@ -26,8 +26,7 @@ header{
     background: #53c653;
     border-radius: 20px;
     padding: 10px 10px;
-    /*-webkit-animation-duration: 5s;  /* Chrome, Safari, Opera */
-    /*float: center;
+    -webkit-animation-duration: 5s;  /* Chrome, Safari, Opera 
     /*
     margin: auto;
 
@@ -72,7 +71,14 @@ header{
     background: #53c653;
     border-radius: 20px;
     padding: 10px 10px;
-}
+} 
+
+.containerDataSearch{
+    float: center
+} 
+
+
+
 
 .sdkskds{
     display: inline-block;
