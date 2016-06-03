@@ -30,24 +30,27 @@ var mode_temp = $("input[name=temperature]:checked").val();
                 //console.log(error);
                     //console.log(parse2);
                     console.log(state);
+
                 var mode_temp = $("input[name=Fahrenheit]:checked").val();
+                console.log(parsed_json['current_observation'])
                 if (mode_temp ==="Fahrenheit"){
                     var location = parsed_json['current_observation']['temp_f'];
                     console.log(parsed_json['current_observation'])
-                    $('.location').append("<p > "+ location +"°F"+"</p>");
+                    $('.TempF').append("<p> "+" Su país es: "+country+" "+location +"°F"+"</p> <br>");
                 }else {
                     var location = parsed_json['current_observation']['temp_c'];
-                    $('.location').append("<p class =\"country\">"+ location +"°c"+"</p>");
+                    $('.TempF').append("<p>"+" Su país es: "+country+" "+ location +"°C"+"</p> <br>");
                 };
 
                 var visibility = parsed_json['current_observation']['visibility_km']
-                $('.location').append("<p > Visibility "+visibility+"    Km</p>");
+                $('.visibility_km').append("Country - State <br>");
+                $('.visibility_km').append(country +" - "+state+"<p > Visibility: "+visibility+"    Km</p> <br>");
 
                 var humidity= parsed_json['current_observation']['relative_humidity']
-                $('.relative_humidity').append("<p> Humidity"+humidity+"</p>");
+                $('.relative_humidity').append(country +"<p> Humidity: "+humidity+"   "+"</p> <br>");
 
                 var wind = parsed_json['current_observation']['wind_kph']
-                $('.wind_string').append( "<p> Wind "+wind+"   KM/h</p>");
+                $('.wind_string').append(country +"<p> Wind: "+wind+"   KM/h</p> <br>");
 /*
                   $('.TempBig').append("<p class=\"weather senst\">"+weather+"</p>"+"<p class=\"dewpoint senst\">"+dewpoint+"</p>"+"<p class=\"senst\">Feeling Climate</p>");
                   $('.icon').append("<img src= \""+ icon +"\" alt =\"Image of weather\">");

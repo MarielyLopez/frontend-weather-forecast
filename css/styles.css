@@ -6,27 +6,35 @@
 
 body{
     /*background: url(http://www.photographyblogger.net/wp-content/uploads/2012/07/6.jpg)no-repeat fixed;*/
-    background: url("../img/font2.jpg")no-repeat center center fixed;/*  "../" es para regresar una carpeta,img es el nombre donde tengo mi imagen,luego el nombre de la imagen.*/
+    background: url("../img/font3.jpg")no-repeat center center fixed;/*  "../" es para regresar una carpeta,img es el nombre donde tengo mi imagen,luego el nombre de la imagen.*/
     -webkit-background-size:cover; /*zafary and google chrome*/
     -moz-background-size:cover;/*mozilla*/
     -o-background-size:cover;/*opera(mobiles and desktop)*/
     background-size:cover;/*explorer*/
-
+    font-family: Comic Sans MS
 }
 
 header{
     width: 100%;
 }
 
+h1{
+    color: #00111a;
+}
 .containWeather{
+    background-color: rgba(0, 0, 0, 0.8);
     width: 60%;
     max-width: 1000px;
     height:100%;
     margin: 20px auto;
-    background: #53c653;
+    /*background: blue;*/
     border-radius: 20px;
     padding: 10px 10px;
-    -webkit-animation-duration: 5s;  /* Chrome, Safari, Opera 
+    border:red;
+
+
+    /*opacity: 0.5;*/
+    /*-webkit-animation-duration: 5s;*/  /* Chrome, Safari, Opera 
     /*
     margin: auto;
 
@@ -37,10 +45,19 @@ header{
     top:50%;*/
 }
 
-.containerDataWeather{
+.containerTitle{
     border-radius: 20px;
-    background: #53c653;
+    border: 2px solid red;
+    background-color: #FEC861;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    text-align: center
 }
+
+
+
 
 .country{
     width: 60%;
@@ -48,11 +65,53 @@ header{
     height:100%;
     margin: 20px auto;
     background: #53c653;
+    border-radius: 10px;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.containerClimate{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 60%;
+    max-width: 1000px;
+    height:100%;
+    margin: 20px auto;
+    /*background: blue;*/
     border-radius: 20px;
     padding: 10px 10px;
 }
 
-.state{
+.results{
+    border-radius: 20px;
+    border: 2px solid red;
+    background-color: #FEC861;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    text-align: center
+}
+
+
+.fontsizesq{
+    width: 60%;
+    max-width: 1000px;
+    height:100%;
+    margin: 20px auto;
+    background: #53c653;
+    border-radius: 10px;
+    padding: 10px 10px;
+    text-align: center;
+    float: inline-block
+}
+
+
+.userType{
+    width: 30%;
+}
+
+
+/*.state{
     width: 60%;
     max-width: 1000px;
     height:100%;
@@ -60,10 +119,11 @@ header{
     background: #53c653;
     border-radius: 20px;
     padding: 10px 10px;
-}
+    text-align: center;
+}*/
 
 
-.containerDataTemperature{
+/*.containerDataTemperature{
     width: 60%;
     max-width: 1000px;
     height:100%;
@@ -71,7 +131,8 @@ header{
     background: #53c653;
     border-radius: 20px;
     padding: 10px 10px;
-} 
+    text-align: center;
+} */
 
 .containerDataSearch{
     float: center

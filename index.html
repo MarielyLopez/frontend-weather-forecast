@@ -32,62 +32,83 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
 </head>
 
 <body>
+<br/>
+
     <div class="containWeather container-fluid">
+<br/>
+        <div class="row-fluid">
+            <div class="span12 containerTitle ">
                 <h1>COGNITS WEATHER</h1>
                 <p>Type a country and a state (or province) to know the climate of the region.</p>
-                <br>
-            <h1>Type a Country</h1>
-            <input type="text" name="country" placeholder="Your country" id="country" />
-            <br>
-            <h1>Type a State</h1>
-            <input type="text" name="state" placeholder="Your State" id="state" />
-            <br>
-        <h1> Temperature</h1>
-        <input type="radio" name="Fahrenheit" value="Celcius" class="celsius" checked> Celcius <br>
-        <input type="radio" name="Fahrenheit" value="Fahrenheit" class="fahrenheit" > Fahrenheit <br>
+            </div> 
+        </div>
+
+        <div class="row-fluid ">
+            <div class="span6 country">
+                <h1>Type a Country</h1>
+                <input class="userType" type="text" name="country" placeholder="Your country" id="country" />
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span6 country">
+                <h1>Type a State</h1>
+                <input class="userType" type="text" name="state" placeholder="Your State" id="state" />
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span6 country">
+                <h1> Temperature</h1>
+                <input type="radio" name="Fahrenheit" value="Celcius" class="celsius" checked> Celcius <br>
+                <input type="radio" name="Fahrenheit" value="Fahrenheit" class="fahrenheit" > Fahrenheit <br>
+                <button type="search" id="search">Search</button>
+            </div>
+        </div>
         <br>
-        <button type="search" id="search">Search</button>
+        <!--button type="search" id="search">Search</button-->
 <!--    </div>
 </div-->
 </div>
 <br>
 
 
-            <div class="clima" id="oculto">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="location country">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
+    <div class="containerClimate">
+    <br>
+            <div class=" row location country results">
+                <h1>Results</h1>
+            </div>
+            <div class="row frames">
+                <div class="col-md-3 TempF fontsizesq"></div>
+                <div class="col-md-3 visibility_km fontsizesq"></div>
+                <div class="col-md-3 relative_humidity fontsizesq"></div>
+                <div class="col-md-3 wind_string fontsizesq"></div>
+            </div>
+    </div>
+
+<!--
+               <div class="row">
                     <div class="col-md-12">
                         <div class="col-md-4">
                             <div class="TempBig">
                                 <div class="icon"></div>
                             </div>
                         </div>
-                        <div class="col-md-8">
-                            <div class="frames">
+-->
+<!--
+                            <div class="col-md-8 frames">
                                 <div class="TempF fontsizesq">
                                 </div>
-                                <div class="visibility_km fontsizesq"><p></p>
+                                <div class="visibility_km fontsizesq">
                                 </div>
-                                <div class="relative_humidity fontsizesq"><p></p>
+                                <div class="relative_humidity fontsizesq">
                                 </div>
-                                <div class="wind_string fontsizesq"><p></p>
+                                <div class="wind_string fontsizesq">
                                 </div>
                             </div>
-                        </div>
                         <br/>
 
-
-
-
-
-
-
-
+-->
 
 
     <!-- Bootstrap core JavaScript
