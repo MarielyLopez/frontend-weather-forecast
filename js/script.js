@@ -1,6 +1,9 @@
 // Javascript Code.
 //The functionality of page
-    $('#search').click(function(){
+$(document).ready(function(){
+    $('#search').click(function(){ /*button*/
+        $(".clear").empty();/*clear the information searched.*/
+        $(".containerClimate").show();/*that is functional whe click search*/
 
 
 var codeCountrie="";
@@ -25,7 +28,9 @@ var mode_temp = $("input[name=temperature]:checked").val();
               $.ajax({
               url : "http://api.wunderground.com/api/2ff1936f14e0db95/geolookup/conditions/q/"+codeCountrie+"/"+state+".json",
               dataType : "jsonp",
+
               success : function(parsed_json) {
+                console.log(parsed_json)
                 var error = parsed_json["response"]["error"]
                 //console.log(error);
                     //console.log(parse2);
@@ -33,24 +38,27 @@ var mode_temp = $("input[name=temperature]:checked").val();
 
                 var mode_temp = $("input[name=Fahrenheit]:checked").val();
                 console.log(parsed_json['current_observation'])
-                if (mode_temp ==="Fahrenheit"){
-                    var location = parsed_json['current_observation']['temp_f'];
-                    console.log(parsed_json['current_observation'])
-                    $('.TempF').append("<p> "+" Su país es: "+country+" "+location +"°F"+"</p> <br>");
-                }else {
-                    var location = parsed_json['current_observation']['temp_c'];
-                    $('.TempF').append("<p>"+" Su país es: "+country+" "+ location +"°C"+"</p> <br>");
-                };
+                if(parsed_json["current_observation"]){
 
-                var visibility = parsed_json['current_observation']['visibility_km']
-                $('.visibility_km').append("Country - State <br>");
-                $('.visibility_km').append(country +" - "+state+"<p > Visibility: "+visibility+"    Km</p> <br>");
+                
+                                if (mode_temp ==="Fahrenheit"){
+                                    var location = parsed_json['current_observation']['temp_f'];
+                                    console.log(parsed_json['current_observation'])
+                                    $('.TempF').append("<p> "+" Your country is: "+country+" "+location +"°F"+"</p> <br>");
+                                }else {
+                                    var location = parsed_json['current_observation']['temp_c'];
+                                    $('.TempF').append("<p>"+" Your country is: "+country+" "+ location +"°C"+"</p> <br>");
+                                };
 
-                var humidity= parsed_json['current_observation']['relative_humidity']
-                $('.relative_humidity').append(country +"<p> Humidity: "+humidity+"   "+"</p> <br>");
+                                var visibility = parsed_json['current_observation']['visibility_km']
+                                $('.visibility_km').append("Country - State <br>");
+                                $('.visibility_km').append(country +" - "+state+"<p > Visibility: "+visibility+"    Km</p> <br>");
 
-                var wind = parsed_json['current_observation']['wind_kph']
-                $('.wind_string').append(country +"<p> Wind: "+wind+"   KM/h</p> <br>");
+                                var humidity= parsed_json['current_observation']['relative_humidity']
+                                $('.relative_humidity').append(country +"<p> Humidity: "+humidity+"   "+"</p> <br>");
+
+                                var wind = parsed_json['current_observation']['wind_kph']
+                                $('.wind_string').append(country +"<p> Wind: "+wind+"   KM/h</p> <br>");
 /*
                   $('.TempBig').append("<p class=\"weather senst\">"+weather+"</p>"+"<p class=\"dewpoint senst\">"+dewpoint+"</p>"+"<p class=\"senst\">Feeling Climate</p>");
                   $('.icon').append("<img src= \""+ icon +"\" alt =\"Image of weather\">");
@@ -63,7 +71,11 @@ var mode_temp = $("input[name=temperature]:checked").val();
                     console.log("Has been double click on search");
                 };
 */
-
+            }else{
+                alert("Sorry, we do not find it.") /*That is for inform the user that not be found */
+                $(".containerClimate").hide(); /*hides the div*/
+            }
+            $("input:text").val(""); /*clear the imput*/
 
             }
           });
@@ -81,3 +93,5 @@ var mode_temp = $("input[name=temperature]:checked").val();
     </div>
 </footer>
 */
+
+});

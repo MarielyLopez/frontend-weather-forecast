@@ -71,6 +71,7 @@ h1{
 }
 
 .containerClimate{
+    display: none;
     background-color: rgba(0, 0, 0, 0.8);
     width: 60%;
     max-width: 1000px;
